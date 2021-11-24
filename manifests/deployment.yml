@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: abhipipelinespythondjango 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abhipipelinespythondjango
+  template:
+    metadata:
+      labels:
+        app: abhipipelinespythondjango 
+    spec:
+      containers:
+        - name: abhipipelinespythondjango 
+          image: sampleaksacr.azurecr.io/abhipipelinespythondjango
+          ports:
+          - containerPort: 80
